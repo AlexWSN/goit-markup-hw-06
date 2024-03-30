@@ -524,14 +524,93 @@ ul {
 }
 
 .modal form {
-  width: 250px;
-  height: 50vh; /* 50% din înălțimea vizualizării */
+  padding: 10px;
+}
+
+div.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="checkbox"] {
+  font-size: 14px;
+  padding: 8px;
 }
 
 .modal-close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.modal form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+div.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.25s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border-color: #007bff;
+}
+
+.checkbox-label {
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+}
+
+.checkbox-label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: border-color 0.25s ease;
+}
+
+input[type="checkbox"]:checked + .checkbox-label:before {
+  content: "\2713";
+  border-color: #007bff;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
 }
 
 #portofoliolist {
@@ -550,16 +629,16 @@ ul {
 #portofoliolist li::after {
   content: "";
   position: absolute;
-  bottom: -100%; /* Setăm inițial suprapunerea în afara cardului */
+  bottom: -100%;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: blue;
-  transition: bottom 0.3s ease; /* Folosim bottom pentru a aluneca suprapunerea */
+  transition: bottom 0.3s ease;
 }
 
 #portofoliolist li:hover::after {
-  bottom: 0; /* Schimbăm bottom la 0 pentru a aduce suprapunerea în interiorul cardului */
+  bottom: 0;
 }
 
 #portofoliolist li img {
