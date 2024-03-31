@@ -558,16 +558,6 @@ ul {
   display: none;
 }
 
-.modal form {
-  width: 120%;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 div.form-group {
   margin-bottom: 10px;
 }
@@ -580,9 +570,16 @@ label {
   position: relative;
 }
 
+label {
+  margin-bottom: 20px;
+}
+.label,
+input {
+  margin-bottom: 10px; 
+}
 input[type="text"],
-input[type="email"],
-input[type="checkbox"] {
+input[type="email"]
+{
   font-size: 14px;
   padding: 8px;
   width: 360px;
@@ -596,19 +593,20 @@ input[type="checkbox"] {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-.checkbox-label {
-  display: flex; /* Utilizăm flexbox pentru a alinia elementele pe aceeași linie */
-  align-items: center; /* Aliniem vertical elementele în centrul containerului */
+.checkbox-container {
+  display: flex;
+  align-items: center;
 }
 
-input[type="checkbox"] {
-  margin-right: 5px;
-  border: 1px solid #ccc;
-  .form-group {
-    position: relative;
-    margin-bottom: 20px;
-  }
+.checkbox-container input[type="checkbox"] {
+  margin-right: 5px; /* Distanța între checkbox și text */
 }
+
+.form-group input[type="checkbox"] {
+  margin-right: 5px; /* Distanță între checkbox și text */
+}
+
+
 .form-group label {
   display: block;
 }
@@ -623,6 +621,7 @@ input[type="checkbox"] {
   left: 10px; /* Ajustează poziția pictogramei */
   transform: translateY(-50%);
 }
+
 
 .input-icon input[type="text"],
 .input-icon input[type="phone"],
@@ -673,8 +672,8 @@ label {
 
 input[type="text"],
 input[type=""],
-input[type="email"],
-input[type="checkbox"] {
+input[type="email"]
+ {
   width: 340px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -691,50 +690,6 @@ input[type="email"]:focus {
   margin-bottom: 20px;
 }
 
-.form-group label {
-  display: block;
-}
-
-.input-icon {
-  position: relative;
-}
-
-.input-icon svg {
-  position: absolute;
-  top: 50%;
-  left: 5px; /* Ajustează poziția pictogramei */
-  transform: translateY(-50%);
-}
-
-.input-icon input[type="text"],
-.input-icon input[type="tel"],
-.input-icon input[type="email"],
-.input-icon textarea {
-  padding-left: 60px; /* Ajustează lățimea pentru a face loc pentru pictogramă */
-}
-
-.checkbox-label {
-  position: relative;
-  padding-left: 25px;
-  cursor: pointer;
-}
-
-.checkbox-label:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 3px;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  transition: border-color 0.25s ease;
-}
-
-input[type="checkbox"]:checked + .checkbox-label:before {
-  content: "\2713";
-  border-color: #007bff;
-}
 
 button[type="submit"] {
   padding: 10px 20px;
