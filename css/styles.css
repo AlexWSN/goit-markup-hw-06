@@ -543,6 +543,8 @@ ul {
 }
 .modal {
   position: fixed;
+  width: 408px;
+  height: 584px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -557,13 +559,13 @@ ul {
 }
 
 .modal form {
-  width: 120%; /* Lățimea formularului */
-  max-width: 400px; /* Lățimea maximă a formularului */
-  margin: 0 auto; /* Centrarea formularului */
-  padding: 20px; /* Spațierea între conținut și margini */
-  background-color: #f9f9f9; /* Culoarea fundalului formularului */
-  border-radius: 10px; /* Rotunjirea colțurilor formularului */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Umbra formularului */
+  width: 120%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 div.form-group {
@@ -573,29 +575,84 @@ div.form-group {
 label {
   font-size: 14px;
 }
+.form-group label {
+  display: flex;
+  position: relative;
+}
 
 input[type="text"],
 input[type="email"],
 input[type="checkbox"] {
   font-size: 14px;
   padding: 8px;
+  width: 360px;
+  height: 20px;
+}
+
+#comment {
+  width: 360px;
+  height: 138px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.checkbox-label {
+  display: flex; /* Utilizăm flexbox pentru a alinia elementele pe aceeași linie */
+  align-items: center; /* Aliniem vertical elementele în centrul containerului */
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  .form-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+}
+.form-group label {
+  display: block;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon svg {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Ajustează poziția pictogramei */
+  transform: translateY(-50%);
+}
+
+.input-icon input[type="text"],
+.input-icon input[type="phone"],
+.input-icon input[type="email"],
+.input-icon textarea {
+  padding-left: 30px;
+  color: #808080;
+  border: none;
+}
+
+button[type="submit"] {
+  margin-top: 20px; /* Spațiu între buton și grupul de câmpuri */
 }
 
 .modal-close-btn {
   position: absolute;
   top: 20px;
-  left: 220px;
-  background-color: #c8bbbb;
-  width: 30px; /* Dimensiunea butonului */
-  height: 30px; /* Dimensiunea butonului */
-  border-radius: 50%; /* Border-radius pentru a face butonul rotund */
+  left: 420px;
+  background-color: #c8c2c23a;
+  border: 1px solid #ccc;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
 
   /* Stilizare pentru simbolul X */
   &::before {
     content: "\00D7"; /* Simbolul X în Unicode */
-    font-size: 20px; /* Mărimea simbolului */
-    color: #000; /* Culoarea simbolului */
-    line-height: 30px; /* Ajustarea liniei de text pentru a centra simbolul în buton */
+    font-size: 20px;
+    color: #787575;
+    line-height: 24px; /* Ajustarea liniei de text pentru a centra simbolul în buton */
     text-align: center; /* Ajustarea centrării simbolului în buton */
   }
 }
@@ -611,12 +668,14 @@ div.form-group {
 
 label {
   display: block;
+  position: relative;
 }
 
 input[type="text"],
+input[type=""],
 input[type="email"],
 input[type="checkbox"] {
-  width: 100%;
+  width: 340px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -626,6 +685,32 @@ input[type="checkbox"] {
 input[type="text"]:focus,
 input[type="email"]:focus {
   border-color: #007bff;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon svg {
+  position: absolute;
+  top: 50%;
+  left: 5px; /* Ajustează poziția pictogramei */
+  transform: translateY(-50%);
+}
+
+.input-icon input[type="text"],
+.input-icon input[type="tel"],
+.input-icon input[type="email"],
+.input-icon textarea {
+  padding-left: 60px; /* Ajustează lățimea pentru a face loc pentru pictogramă */
 }
 
 .checkbox-label {
@@ -659,7 +744,7 @@ button[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.25s ease;
-  top: 415px;
+  top: 550px;
 }
 
 button[type="submit"]:hover {
